@@ -1,0 +1,182 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+  }
+  
+  .loader div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #3498db;
+    animation: bounce 1.4s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Video container styling */
+.video-container {
+  background-color: #1e1e2c;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.video-container video{
+  width: 100%;
+  max-height: 600px;
+  min-height: 450px;
+  min-width: 800px;
+  max-width: 800px;
+  margin: auto;
+}
+
+video {
+
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.vid-cont{
+  width: 60rem;
+  margin-left: 30px;
+  background-color: blue;
+}
+/* Hover effect on video */
+video:hover {
+  transform: scale(1.03);
+}
+
+/* Video quality dropdown styles */
+.video-quality-dropdown {
+  margin-top: 15px;
+  position: relative;
+  text-align: left;
+  font-size: 16px;
+}
+
+.video-quality-dropdown label {
+  font-weight: 600;
+  color: #fff;
+  margin-right: 10px;
+}
+
+#quality-select {
+  background-color: #29293f;
+  color: #fff;
+  border: 2px solid #3b3b5c;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on quality select */
+#quality-select:hover {
+  background-color: #3b3b5c;
+  border-color: #e91e63;
+}
+
+#quality-select:focus {
+  outline: none;
+  border-color: #e91e63;
+  background-color: #3b3b5c;
+}
+
+option {
+  background-color: #29293f;
+  color: #fff;
+}
+
+/* Style for when HLS is not supported */
+video p {
+  font-size: 18px;
+  color: #e91e63;
+}
+
+/* Loading spinner or message */
+.video-container:before {
+  content: 'Loading...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  display: none;
+}
+
+
+/* Show the loading message when video is loading */
+.video-container.loading:before {
+  display: block;
+}
+/* 
+.video-subtitles-dropdown {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+#subtitle-select {
+  padding: 5px;
+  font-size: 14px;
+}
+.video-subtitles-dropdown {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+#subtitle-select {
+  padding: 5px;
+  font-size: 14px;
+} */

@@ -1,0 +1,91 @@
+/* Overall container styles */
+.contain {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #f8f9fa; */
+    margin: 0;
+    /* padding: 40px; */
+    text-align: center;
+}
+
+/* Title styles */
+.title {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0 47rem 5px 10px;
+}
+
+/* Anime list container styles */
+.anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Individual anime card styles */
+/* Individual anime card styles */
+.anime-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    /* Reduced padding to decrease card height */
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 4px rgba(156, 156, 156, 0.5);
+}
+
+/* Anime poster styles */
+.poster {
+    width: 180px;
+    height: 180px;
+    /* Reduced height of the poster */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    /* Adjusted margin for better spacing */
+}
+
+/* Anime information text styles */
+.anime-info {
+    padding: 5px;
+    /* Reduced padding to decrease card height */
+}
+.anime-info p{
+    color: rgb(178, 178, 178);
+
+}
+
+.anime-title {
+    font-size: 1rem;
+    color: #e8e8e8;
+    font-weight: bold;
+    margin: 5px 0;
+    /* Adjusted margin for better spacing */
+}
+
+
+
+/* Loading and no data messages */
+.loading,
+.no-data {
+    font-size: 1.5rem;
+    color: #d5d5d5;
+    text-align: center;
+    margin-top: 50px;
+}

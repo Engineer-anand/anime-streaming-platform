@@ -1,0 +1,242 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.slider-containers {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Scrollable wrapper for anime items */
+.anime-scroll-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Main scrollable section */
+.anime-scroll {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual anime item */
+.anime-item {
+    position: relative;
+    flex: 0 0 25%;
+    /* Default 4 items per slide */
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.anime-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.anime-item:hover img {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+.anime-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Anime details on hover */
+.anime-item .anime-details {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.anime-item:hover .anime-details {
+    opacity: 1;
+    visibility: visible;
+}
+.anime-name{
+    padding-top: 10px;
+}
+
+.anime-item .anime-details .anime-name {
+    font-size: 1.2rem;
+  
+    font-weight: bold;
+}
+
+
+.anime-item .anime-details .watch-btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.anime-item .anime-details .watch-btn:hover {
+    background-color: #d45f4f;
+}
+
+/* Anime column wrapper */
+.anime-col-wrapper {
+    display: flex;
+    overflow-x: auto;
+}
+
+/* Anime column */
+.anime-col {
+    display: flex;
+}
+
+/* Navigation buttons */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.nexts {
+    right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .anime-item {
+        flex: 0 0 33.33%;
+        /* 3 items per slide */
+    }
+}
+
+@media (max-width: 900px) {
+    .anime-item {
+        flex: 0 0 50%;
+        /* 2 items per slide */
+    }
+}
+
+@media (max-width: 600px) {
+    .anime-item {
+        flex: 0 0 100%;
+        /* 1 item per slide */
+    }
+
+    .slider-container {
+        height: 300px;
+    }
+
+    .anime-image {
+        height: 150px;
+    }
+}
+
+/* 3-dot loading animation */
+.loading-dots {
+    display: flex;
+    margin-left: 32rem;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    height: 100px;
+    /* Set height to center vertically in a container */
+}
+
+.loading-dots div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    animation: dot 1.2s infinite ease-in-out;
+}
+
+.loading-dots div:nth-child(1) {
+    animation-delay: -0.4s;
+}
+
+.loading-dots div:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.loading-dots div:nth-child(3) {
+    animation-delay: 0s;
+}
+
+@keyframes dot {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}

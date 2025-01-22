@@ -1,0 +1,21 @@
+.view-more-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

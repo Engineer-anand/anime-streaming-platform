@@ -1,0 +1,293 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Anime Details Container */
+.anime-details {
+    width: 100%;
+    /* margin: 40px auto; */
+    padding: 20px;
+    background: rgba(56, 56, 56, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Content Styling */
+.cont span {
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Image Styling */
+.anime-details img {
+    max-width: 250px;
+    margin: 10px 15px 10px 0;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Flex Layout */
+.main-cont {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.cont {
+    flex: 1;
+}
+
+.cont p {
+    margin: 10px 0;
+}
+
+/* Seasons, Related, Recommended, Popular Animes */
+.seasons,
+.related-animes,
+.recommended-animes,
+.most-popular-animes {
+    display: grid;
+    gap: 30px;
+    margin-top: 40px;
+    cursor: pointer;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.related-anime,
+.recommended-anime,
+.popular-anime,
+.season {
+    background: rgba(217, 217, 217, 0.13);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(238, 237, 237, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.related-anime:hover,
+.recommended-anime:hover,
+.popular-anime:hover,
+.season:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+.related-anime img,
+.recommended-anime img,
+.popular-anime img,
+.season img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Watch Button */
+.watch-btn {
+    text-align: center;
+    /* margin-top: 30px; */
+}
+
+.watch-btn button {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 15px 30px;
+    position: absolute;
+    top: 23rem;
+    left: 30rem;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.watch-btn button:hover {
+    background-color: #e53e36; /* Darker shade of tomato */
+}
+
+.watch-btn button:focus {
+    outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .seasons,
+    .related-animes,
+    .recommended-animes,
+    .most-popular-animes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .season,
+    .related-anime,
+    .recommended-anime,
+    .popular-anime {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .anime-details {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .anime-details {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    .related-animes,
+    .recommended-animes,
+    .most-popular-animes {
+        grid-template-columns: 1fr;
+    }
+
+    .seasons {
+        grid-template-columns: 1fr;
+    }
+
+    .season img,
+    .related-anime img,
+    .recommended-anime img,
+    .popular-anime img {
+        max-height: 150px;
+    }
+}
+
+
+/* Container to center the spinner */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it is on top of all other elements */
+  }
+  
+  /* 3-Dot Spinner Styles */
+  .loader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+  }
+  
+  .loader div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Blue color for dots */
+    animation: bounce 1.4s infinite ease-in-out;
+  }
+  
+  .loader div:nth-child(1) {
+    animation-delay: -0.32s; /* Delay the first dot */
+  }
+  
+  .loader div:nth-child(2) {
+    animation-delay: -0.16s; /* Delay the second dot */
+  }
+  
+  /* Bounce animation for each dot */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px); /* Moves the dot up */
+    }
+    60% {
+      transform: translateY(-5px); /* Moves the dot up a bit less */
+    }
+  }
+  

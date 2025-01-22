@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a202c;
+    /* Dark background */
+    /* height: 100vh; */
+}
+
+.placeholder {
+    width: 78%;
+}
+
+.placeholder h2,
+.placeholder p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.placeholder p {
+    color: rgb(210, 210, 210);
+}
+
+
+.p {
+    padding: 10px 0 15px 0;
+    width: 60%;
+    color: rgb(207, 207, 207);
+}
+
+.p span {
+    padding: 5px;
+}
+
+.container {
+    background-color: rgba(45, 55, 72, 0.8);
+    /* Semi-transparent dark background */
+    border-radius: 20px;
+    margin-top: 5rem;
+    /* Rounded corners */
+    padding: 20px;
+    height: 23rem;
+    /* Adjust based on your needs */
+    width: 90%;
+    /* Adjust based on your layout */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    color: white;
+    background: linear-gradient(to left, rgba(234, 234, 234, 0.35) 0%, rgb(20, 18, 50)96%),
+        url('./../image/banner.jpeg');
+
+    /* Gradient overlay with background image */
+    /* 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8)),
+        url('https://storage.googleapis.com/a1aa/image/J0mSMSo8-81usWv5aEQl30QX9gL1yE0nTbqFyZ_wmts.jpg'); */
+
+    background-size: cover;
+    /* Ensure the background image covers the container */
+    background-position: center center;
+    /* Start from the center */
+}
+
+
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* margin: 0 20rem 0 -5rem; */
+}
+
+.contents {
+    flex: 1;
+    z-index: 1;
+    /* Ensure content is above the background */
+}
+
+.home-container {
+    position: absolute;
+    /* top: 27%; */
+    left: 5.5%
+}
+
+.titles img {
+    width: 10rem;
+}
+
+.titles {
+    margin: 0 67.5rem 1rem 0;
+
+}
+
+.highlights {
+    color: #ff4f4f;
+    /* Pink color */
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #ff4f4f;
+    /* Pink */
+    border: none;
+    border-radius: 50%;
+    color: white;
+
+    cursor: pointer;
+}
+
+.search-buttons {
+
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    left: 37.7rem;
+    top: 12.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.btn {
+    /* margin: 4rem 0 0 -13rem; */
+    display: flex;
+}
+
+.btn button {
+    background: #ff0000;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 8rem;
+    color: white;
+    font-size: 15px;
+    border-radius: 43px;
+    border: none;
+}
+
+
+.top-search {
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.watch-button {
+    padding: 10px 20px;
+    background-color: #e53e3e;
+    /* Pink */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.i {
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.anime-image {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
