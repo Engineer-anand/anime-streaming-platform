@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Hls from "hls.js";
+import { API_BASE_URL } from "../config/apiConfig";
 import './../style/global.css';
 
 const VideoPlayer = ({ episodeId, animeName, onNavigateEpisode }) => {
@@ -22,10 +23,10 @@ const VideoPlayer = ({ episodeId, animeName, onNavigateEpisode }) => {
 
       try {
         const resSub = await axios.get(
-          `https://api-hazel-pi.vercel.app/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=sub`
+          `${API_BASE_URL}/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=sub`
         );
         const resDub = await axios.get(
-          `https://api-hazel-pi.vercel.app/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=dub`
+          `${API_BASE_URL}/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=dub`
         );
 
         setIsSubAvailable(resSub.data?.sources?.length > 0);
@@ -46,7 +47,7 @@ const VideoPlayer = ({ episodeId, animeName, onNavigateEpisode }) => {
       try {
         setLoading(true);
         const res = await axios.get(
-          `https://api-hazel-pi.vercel.app/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=${category}`
+          `${API_BASE_URL}/aniwatch/episode-srcs?id=${episodeId}&server=vidstreaming&category=${category}`
         );
 
         if (res.data) {

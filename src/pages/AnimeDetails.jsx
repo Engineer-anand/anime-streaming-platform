@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config/apiConfig';
 import './../style/AnimeDetails.css';
 import Header from '../components/Header';
 
@@ -23,7 +24,7 @@ const AnimeDetails = () => {
           setAnimeDetails(JSON.parse(cachedData));
           setLoading(false);
         } else {
-          const response = await fetch(`https://api-hazel-pi.vercel.app/aniwatch/anime/${id}`);
+          const response = await fetch(`${API_BASE_URL}/aniwatch/anime/${id}`);
           if (!response.ok) {
             throw new Error('Failed to fetch data');
           }

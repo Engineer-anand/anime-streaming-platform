@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation
+import { RECOMMENDED_API_URL } from '../../config/apiConfig';
 import './../../style/RecommendedAnime.css'; // Import the external CSS file
 
 const RecommendedAnime = () => {
@@ -15,7 +16,7 @@ const RecommendedAnime = () => {
       setLoading(false);
     } else {
       // Fetch the recommended anime data from the API
-      fetch('https://api-3-git-main-anands-projects-36cf6daf.vercel.app/api/random')
+      fetch(RECOMMENDED_API_URL)
         .then((response) => response.json())
         .then((data) => {
           console.log('API Response:', data);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/apiConfig';
 import logo from './../image/nex.png';
 import './../style/Header.css';
 
@@ -23,7 +24,7 @@ const Header = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`https://api-hazel-pi.vercel.app/aniwatch/search?keyword=${searchTerm}`);
+            const response = await axios.get(`${API_BASE_URL}/aniwatch/search?keyword=${searchTerm}`);
             setAnimeResults(response.data.animes || []);
             setOverlayVisible(true); // Show overlay on successful search
         } catch (err) {

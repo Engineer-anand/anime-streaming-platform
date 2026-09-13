@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../config/apiConfig";
 import "./../style/global.css"; // Import the CSS file
 
 const Sidebar = () => {
@@ -17,7 +18,7 @@ const Sidebar = () => {
                 setTopAnimes(JSON.parse(cachedData));
             } else {
                 // Fetch data from the API if no cached data
-                const response = await fetch("https://api-hazel-pi.vercel.app/aniwatch");
+                const response = await fetch(`${API_BASE_URL}/aniwatch`);
                 const data = await response.json();
                 const topAnimesForPeriod = data.top10Animes[period];
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/apiConfig';
 import './../style/innerHome.css';
 import MostPopularAnimes from './Animegrid/mostPopularAnimes';
 import TopArising from './Animegrid/TopUpcomingAnimes';
@@ -29,7 +30,7 @@ const InnerHome = () => {
     if (cachedData) {
       setSpotLightAnimes(JSON.parse(cachedData));
     } else {
-      fetch('https://api-hazel-pi.vercel.app/aniwatch')
+      fetch(`${API_BASE_URL}/aniwatch`)
         .then((response) => response.json())
         .then((data) => {
           setSpotLightAnimes(data.spotLightAnimes);
@@ -55,7 +56,7 @@ const InnerHome = () => {
     setError(null);
     try {
       const response = await axios.get(
-        `https://api-hazel-pi.vercel.app/aniwatch/search?keyword=${searchTerm}`
+        `${API_BASE_URL}/aniwatch/search?keyword=${searchTerm}`
       );
       setAnimeResults(response.data.animes || []);
       setOverlayVisible(true);

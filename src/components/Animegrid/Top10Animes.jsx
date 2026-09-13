@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation
+import { API_BASE_URL } from '../../config/apiConfig';
 import './../../style/gridStyles.css';
 
 function Top10Animes() {
@@ -18,7 +19,7 @@ function Top10Animes() {
           setTop10Animes(JSON.parse(cachedData));
         } else {
           // If no data in localStorage, fetch from the API
-          const response = await fetch('https://api-hazel-pi.vercel.app/aniwatch');
+          const response = await fetch(`${API_BASE_URL}/aniwatch`);
           const data = await response.json();
 
           // Save the data in localStorage

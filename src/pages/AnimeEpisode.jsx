@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config/apiConfig';
 import './../style/AnimeEpisode.css';
 import VideoPlayer from '../components/VideoPlayer';
 import AnimecardDetails from '../components/veiwPage/AnimecardDetails';
@@ -32,7 +33,7 @@ const AnimeEpisodes = () => {
         setLoading(false);
       } else {
         try {
-          const response = await fetch(`https://api-hazel-pi.vercel.app/aniwatch/episodes/${id}`);
+          const response = await fetch(`${API_BASE_URL}/aniwatch/episodes/${id}`);
           const data = await response.json();
 
           if (data.episodes) {

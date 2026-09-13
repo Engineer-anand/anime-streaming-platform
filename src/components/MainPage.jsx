@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/apiConfig';
 
 const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +19,7 @@ const MainPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`https://api-hazel-pi.vercel.app/aniwatch/search?keyword=${searchTerm}`);
+      const response = await axios.get(`${API_BASE_URL}/aniwatch/search?keyword=${searchTerm}`);
       setAnimeResults(response.data.animes || []);
       setOverlayVisible(true); // Show overlay
     } catch (error) {

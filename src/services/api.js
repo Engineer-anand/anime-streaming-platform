@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const API_BASE_URL = "https://anime-api-dl67.onrender.com/api";
+import { API_BASE_URL } from "../config/apiConfig";
 
 // Fetch list of anime based on search
 export const fetchAnimeList = async (searchTerm = "") => {

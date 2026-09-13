@@ -27,9 +27,9 @@ const Footer = () => {
         {/* Contact Section */}
         <div className="footer-section contact">
           <h3>Contact Us</h3>
-          <p><i className="fas fa-envelope"></i> anand.enginner.ak@gmail.com</p>
-          {/* <p><i className="fas fa-phone"></i> +123 456 7890</p> */}
-          <p><i className="fas fa-map-marker-alt"></i>Lucknow</p>
+          <p><i className="fas fa-envelope"></i> support@example.com</p>
+          {/* <p><i className="fas fa-phone"></i> +1 (555) 000-0000</p> */}
+          <p><i className="fas fa-map-marker-alt"></i> City, Country</p>
         </div>
       </div>
 
@@ -38,9 +38,9 @@ const Footer = () => {
         <p>&copy; 2025 NexAnime All rights reserved.</p>
         <p>
           Follow us:
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a> |
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a> |
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="#" target="_blank" rel="noreferrer">Facebook</a> |
+          <a href="#" target="_blank" rel="noreferrer">Twitter</a> |
+          <a href="#" target="_blank" rel="noreferrer">Instagram</a>
         </p>
       </div>
     </footer>

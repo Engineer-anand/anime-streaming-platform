@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../../config/apiConfig';
 import './../../style/gridStyles.css';
 
 function MostPopularAnimes() {
@@ -26,7 +27,7 @@ function MostPopularAnimes() {
 
       setLoading(true);
       try {
-        const response = await fetch(`https://api-hazel-pi.vercel.app/aniwatch/?page=${page}`);
+        const response = await fetch(`${API_BASE_URL}/aniwatch/?page=${page}`);
         const data = await response.json();
 
         if (data.featuredAnimes && data.featuredAnimes.mostPopularAnimes) {

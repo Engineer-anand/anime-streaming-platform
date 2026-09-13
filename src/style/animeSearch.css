@@ -50,11 +50,6 @@ body {
     background: linear-gradient(to left, rgba(234, 234, 234, 0.35) 0%, rgb(20, 18, 50)96%),
         url('./../image/banner.jpeg');
 
-    /* Gradient overlay with background image */
-    /* 
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8)),
-        url('https://storage.googleapis.com/a1aa/image/J0mSMSo8-81usWv5aEQl30QX9gL1yE0nTbqFyZ_wmts.jpg'); */
-
     background-size: cover;
     /* Ensure the background image covers the container */
     background-position: center center;
